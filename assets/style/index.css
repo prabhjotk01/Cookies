@@ -4,3 +4,16 @@ body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.hero {
+    height: 100dvh;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
