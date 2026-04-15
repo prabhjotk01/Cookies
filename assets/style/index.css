@@ -65,3 +65,29 @@ body {
     width: 300px;
     text-align: center;
 }
+
+.box.show {
+    display: block;
+}
+
+.box h2 {
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#acceptAllBtn, #saveBtn {
+    background: green;
+    color: white;
+}
