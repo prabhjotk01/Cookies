@@ -23,21 +23,6 @@ body {
     margin-bottom: 10px;
 }
 
-.info-box {
-    padding: 30px;
-    text-align: center;
-    background: #f0f0f0;
-}
-
-#cookieInfo {
-    background: white;
-    padding: 15px;
-    margin-top: 15px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
 
 .overlay {
     display: none;
@@ -91,3 +76,26 @@ button {
     background: green;
     color: white;
 }
+
+#settingsBtn {
+    background: blue;
+    color: white;
+}
+
+#rejectBtn {
+    background: red;
+    color: white;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item input {
+    width: 18px;
+    height: 18px;
+}
+
