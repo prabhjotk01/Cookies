@@ -14,3 +14,13 @@ const chkOS= document.getElementById('chkOS');
 const chkScreen = document.getElementById('chkScreen');
 
 const LIFETIME = 15;
+
+function setCookie(name, value, maxAge) {
+    let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)};
+    path=/; 
+    SameSite=Lax`;
+    if (maxAge) {
+        cookieString += `; max-age=${maxAge}`;
+    }
+    document.cookie = cookieString;
+}
