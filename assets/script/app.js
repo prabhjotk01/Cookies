@@ -57,7 +57,7 @@ function getBrowserName() {
     return 'Unknown';
 }
 
-// ========== OS NAME (CLASS STYLE) ==========
+
 
 function getOSName() {
     const ua = navigator.userAgent;
@@ -118,7 +118,11 @@ rejectBtn.addEventListener('click', function() {
 
 
 if (getCookie('consent') === null) {
-    setTimeout(function() {
-        showBox(box1);
+    setTimeout(() => {
+    showBox(box1);
     }, 2000);
 }
+
+setTimeout(() => {   //add this check cookies after 5 sec for testing purposes 
+    console.log(`Cookies: ${document.cookie}`);
+}, 5000);
