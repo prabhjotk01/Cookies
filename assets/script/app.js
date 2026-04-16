@@ -12,3 +12,5 @@ const rejectBtn = document.getElementById('rejectBtn');
 const chkBrowser = document.getElementById('chkBrowser');
 const chkOS= document.getElementById('chkOS');
 const chkScreen = document.getElementById('chkScreen');
+
+const LIFETIME = 15;
