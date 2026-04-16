@@ -88,8 +88,8 @@ acceptBtn.addEventListener('click', function() {
 });
 
 settingsBtn.addEventListener('click', function() {
-    closeModal();
-    openModal(box2);
+    hideBox();
+    showBox(box2);
 });
 
 saveBtn.addEventListener('click', function() {
@@ -99,12 +99,12 @@ saveBtn.addEventListener('click', function() {
     if (chkOS.checked) setCookie('os', getOSName(), LIFETIME);
     if (chkScreen.checked) setCookie('screen', getScreenSize(), LIFETIME);
 
-    hideModals();
+    hideBox();
 });
 
 rejectBtn.addEventListener('click', function() {
     setCookie('consent', 'rejected', LIFETIME);
-    hideModals();
+    hideBox();
 });
 
 
