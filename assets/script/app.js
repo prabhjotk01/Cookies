@@ -41,11 +41,10 @@ function getCookie(name) {
 function getBrowserName() {
     const ua = navigator.userAgent;
 
-    if (ua.includes('Firefox')) return 'Firefox';
-    if (ua.includes('Chrome')) return 'Chrome';
-    if (ua.includes('Safari')) return 'Safari';
     if (ua.includes('Edg')) return 'Edge';
-
+    if (ua.includes('Chrome') && !ua.includes('Edg')) return 'Chrome';
+    if (ua.includes('Safari') && !ua.includes('Chrome')) return 'Safari';
+    if (ua.includes('Firefox')) return 'Firefox';
     return 'Unknown';
 }
 
