@@ -88,8 +88,8 @@ acceptBtn.addEventListener('click', function() {
 });
 
 settingsBtn.addEventListener('click', function() {
-    hideModals();
-    showModal(box2);
+    closeModal();
+    openModal(box2);
 });
 
 saveBtn.addEventListener('click', function() {
