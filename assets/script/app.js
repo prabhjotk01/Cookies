@@ -66,7 +66,7 @@ function getScreenSize() {
     return `${screen.width}x${screen.height}`;
 }
 
-// ========== SHOW/HIDE MODALS ==========
+
 
 function openModal() {
     overlay.classList.add('open');
@@ -84,7 +84,7 @@ acceptBtn.addEventListener('click', function() {
     setCookie('browser', getBrowserName(), LIFETIME);
     setCookie('os', getOSName(), LIFETIME);
     setCookie('screen', getScreenSize(), LIFETIME);
-    hideModals();
+    closeModal();
 });
 
 settingsBtn.addEventListener('click', function() {
