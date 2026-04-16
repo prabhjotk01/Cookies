@@ -24,3 +24,16 @@ function setCookie(name, value, maxAge) {
     }
     document.cookie = cookieString;
 }
+
+function getCookie(name) {
+    if (document.cookie) {
+        const cookiePairs = document.cookie.split(';');
+        for (let i = 0; i < cookiePairs.length; i++) {
+            let trimmedCookie = cookiePairs[i].trim();
+            if (decodeURIComponent(trimmedCookie.split('=')[0]) === name) {
+                return decodeURIComponent(trimmedCookie.split('=')[1]);
+            }
+        }
+    }
+    return null;
+}
