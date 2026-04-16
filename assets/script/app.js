@@ -68,12 +68,12 @@ function getScreenSize() {
 
 
 
-function openModal() {
+function showBox(box) {
     overlay.classList.add('open');
-    modal.classList.add('open');
+    box.classList.add('open');
 }
 
-function closeModal() {
+function hideBox(){
     overlay.classList.remove('open');
     box1.classList.remove('open');
     box2.classList.remove('open');
@@ -84,7 +84,7 @@ acceptBtn.addEventListener('click', function() {
     setCookie('browser', getBrowserName(), LIFETIME);
     setCookie('os', getOSName(), LIFETIME);
     setCookie('screen', getScreenSize(), LIFETIME);
-    closeModal();
+    hideBox();
 });
 
 settingsBtn.addEventListener('click', function() {
@@ -107,7 +107,6 @@ rejectBtn.addEventListener('click', function() {
     hideModals();
 });
 
-// ========== INIT ==========
 
 if (getCookie('consent') === null) {
     setTimeout(function() {
