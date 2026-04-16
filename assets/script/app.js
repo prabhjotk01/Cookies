@@ -53,11 +53,11 @@ function getBrowserName() {
 function getOSName() {
     const ua = navigator.userAgent;
 
-    if (ua.includes('Win')) return 'Windows';
-    if (ua.includes('Mac')) return 'MacOS';
-    if (ua.includes('Linux')) return 'Linux';
     if (ua.includes('Android')) return 'Android';
     if (ua.includes('iPhone')) return 'iOS';
+    if (ua.includes('Win')) return 'Windows';
+    if (ua.includes('Mac')) return 'MacOS';
+    
 
     return 'UnKnown';
 }
@@ -68,15 +68,15 @@ function getScreenSize() {
 
 // ========== SHOW/HIDE MODALS ==========
 
-function showModal(modal) {
-    overlay.classList.add('show');
-    modal.classList.add('show');
+function openModal() {
+    overlay.classList.add('open');
+    modal.classList.add('open');
 }
 
-function hideModals() {
-    overlay.classList.remove('show');
-    box1.classList.remove('show');
-    box2.classList.remove('show');
+function closeModal() {
+    overlay.classList.remove('open');
+    box1.classList.remove('open');
+    box2.classList.remove('open');
 }
 
 acceptBtn.addEventListener('click', function() {
