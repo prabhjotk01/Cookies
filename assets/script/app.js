@@ -16,7 +16,16 @@ const chkScreen = document.getElementById('chkScreen');
 const LIFETIME = 15;
 
 function setCookie(name, value, maxAge) {
-    let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; path=/; SameSite=Lax`;
+    let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+
+    const options = {
+        path: '/',
+        SameSite: 'Lax'
+    };
+
+    for (let option in options) {
+        cookieString += `; ${option}=${options[option]}`;
+    }
 
     if (maxAge !== undefined) {
         cookieString += `; max-age=${maxAge}`;
@@ -110,6 +119,6 @@ rejectBtn.addEventListener('click', function() {
 
 if (getCookie('consent') === null) {
     setTimeout(function() {
-        showModal(box1);
-    }, 1500);
+        showBox(box1);
+    }, 2000);
 }
