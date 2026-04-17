@@ -89,7 +89,7 @@ function hideBox(){
 }
 
 acceptBtn.addEventListener('click', function() {
-    setCookie('consent', 'all', LIFETIME);
+    setCookie('userChoice', 'all', LIFETIME);
     setCookie('browser', getBrowserName(), LIFETIME);
     setCookie('os', getOSName(), LIFETIME);
     setCookie('screen', getScreenSize(), LIFETIME);
@@ -102,7 +102,7 @@ settingsBtn.addEventListener('click', function() {
 });
 
 saveBtn.addEventListener('click', function() {
-    setCookie('consent', 'selected', LIFETIME);
+    setCookie('userChoice', 'selected', LIFETIME);
 
     if (chkBrowser.checked) setCookie('browser', getBrowserName(), LIFETIME);
     if (chkOS.checked) setCookie('os', getOSName(), LIFETIME);
@@ -112,17 +112,17 @@ saveBtn.addEventListener('click', function() {
 });
 
 rejectBtn.addEventListener('click', function() {
-    setCookie('consent', 'rejected', LIFETIME);
+    setCookie('userChoice', 'rejected', LIFETIME);
     hideBox();
 });
 
 
-if (getCookie('consent') === null) {
+if (getCookie('userChoice') === null) {
     setTimeout(() => {
     showBox(box1);
     }, 2000);
 }
 
-setTimeout(() => {   //add this check cookies after 5 sec for testing purposes 
+setTimeout(() => {   //add this check cookies after 5 sec for testing purposes in console
     console.log(`Cookies: ${document.cookie}`);
 }, 5000);
