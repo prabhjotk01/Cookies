@@ -78,7 +78,7 @@ button {
     cursor: pointer;
 }
 
-#acceptAllBtn, #saveBtn {
+#acceptBtn, #saveBtn {
     background: green;
     color: white;
 }
