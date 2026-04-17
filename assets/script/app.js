@@ -78,14 +78,14 @@ function getScreenSize() {
 
 
 function showBox(box) {
-    overlay.classList.add('open');
-    box.classList.add('open');
+    overlay.classList.add('show');
+    box.classList.add('show');
 }
 
 function hideBox(){
-    overlay.classList.remove('open');
-    box1.classList.remove('open');
-    box2.classList.remove('open');
+    overlay.classList.remove('show');
+    box1.classList.remove('show');
+    box2.classList.remove('show');
 }
 
 acceptBtn.addEventListener('click', function() {
